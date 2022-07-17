@@ -11,6 +11,10 @@ import { DetailProductComponent } from './product/detail-product/detail-product.
 import { NewProductComponent } from './product/new-product/new-product.component';
 import { EditProductComponent } from './product/edit-product/edit-product.component';
 
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { EditProductComponent } from './product/edit-product/edit-product.compon
     AppRoutingModule,
 
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot() // ToastrModule added
+    ToastrModule.forRoot(), // ToastrModule added
+
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
