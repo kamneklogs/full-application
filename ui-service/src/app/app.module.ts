@@ -6,14 +6,26 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ListProductComponent } from './product/list-product/list-product.component';
+import { DetailProductComponent } from './product/detail-product/detail-product.component';
+import { NewProductComponent } from './product/new-product/new-product.component';
+import { EditProductComponent } from './product/edit-product/edit-product.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListProductComponent,
+    DetailProductComponent,
+    NewProductComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot() // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
