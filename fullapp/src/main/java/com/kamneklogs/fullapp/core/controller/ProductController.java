@@ -1,4 +1,4 @@
-package com.kamneklogs.fullapp.controller;
+package com.kamneklogs.fullapp.core.controller;
 
 import java.util.List;
 
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kamneklogs.fullapp.dto.Message;
-import com.kamneklogs.fullapp.dto.ProductDTO;
-import com.kamneklogs.fullapp.entity.Product;
-import com.kamneklogs.fullapp.service.ProductService;
+import com.kamneklogs.fullapp.core.dto.Message;
+import com.kamneklogs.fullapp.core.dto.ProductDTO;
+import com.kamneklogs.fullapp.core.entity.Product;
+import com.kamneklogs.fullapp.core.service.ProductService;
 
 @RestController
 @RequestMapping("/api/product")

@@ -1,4 +1,4 @@
-package com.kamneklogs.fullapp.dto;
+package com.kamneklogs.fullapp.core.dto;
 
 public class Message {
 

@@ -1,4 +1,4 @@
-package com.kamneklogs.fullapp.entity;
+package com.kamneklogs.fullapp.core.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

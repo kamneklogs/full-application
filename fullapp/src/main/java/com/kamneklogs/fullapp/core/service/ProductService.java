@@ -1,4 +1,4 @@
-package com.kamneklogs.fullapp.service;
+package com.kamneklogs.fullapp.core.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kamneklogs.fullapp.entity.Product;
-import com.kamneklogs.fullapp.repository.ProductRepository;
+import com.kamneklogs.fullapp.core.entity.Product;
+import com.kamneklogs.fullapp.core.repository.ProductRepository;
 
 @Service
 public class ProductService {

@@ -1,6 +1,6 @@
-package com.kamneklogs.fullapp.dto;
+package com.kamneklogs.fullapp.core.dto;
 
-import com.kamneklogs.fullapp.entity.Product;
+import com.kamneklogs.fullapp.core.entity.Product;
 
 public class ProductDTO {
 

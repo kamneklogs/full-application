@@ -1,11 +1,11 @@
-package com.kamneklogs.fullapp.repository;
+package com.kamneklogs.fullapp.core.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.kamneklogs.fullapp.entity.Product;
+import com.kamneklogs.fullapp.core.entity.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
