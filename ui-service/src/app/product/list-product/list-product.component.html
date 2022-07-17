@@ -1,1 +1,27 @@
-{{products | json}}
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Details</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td><button class="btn btn-outline-primary" routerLink="/detail/{{product.id}}"><i
+                class="fa-solid fa-eye"></i> Details</button></td>
+            <td><button class="btn btn-outline-warning" routerLink="/edit/{{product.id}}"><i
+                        class="fa-solid fa-pen-to-square"></i> Edit</button></td>
+            <td><button class="btn btn-outline-danger" (click)="deleteProduct(product.id)"><i
+                        class="fa-solid fa-trash"></i> Delete </button></td>
+        </tr>
+
+    </tbody>
+</table>

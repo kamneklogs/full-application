@@ -85,7 +85,7 @@ public class ProductController {
             return new ResponseEntity<Message>(new Message("The product is already exist"), HttpStatus.BAD_REQUEST);
         }
 
-        Product product = productService.findByName(productdDto.getName()).get();
+        Product product = productService.findById(id).get();
 
         product.setName(productdDto.getName());
         product.setPrice(productdDto.getPrice());

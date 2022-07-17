@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: ListProductComponent },
   { path: 'detail/:id', component: DetailProductComponent },
   { path: 'new', component: NewProductComponent },
-  { path: 'edit/id', component: EditProductComponent },
+  { path: 'edit/:id', component: EditProductComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' } // Redirect to root component
 ];
 

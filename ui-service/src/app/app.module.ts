@@ -12,7 +12,7 @@ import { NewProductComponent } from './product/new-product/new-product.component
 import { EditProductComponent } from './product/edit-product/edit-product.component';
 
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,  ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -32,7 +32,8 @@ import {FormsModule} from '@angular/forms';
     ToastrModule.forRoot(), // ToastrModule added
 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
