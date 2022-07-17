@@ -39,19 +39,19 @@ public class ProductController {
     }
 
     @GetMapping("/findById/{id}")
-    public ResponseEntity<Product> findById(@PathVariable("id") int id) {
+    public ResponseEntity<?> findById(@PathVariable("id") int id) {
         if (productService.existById(id)) {
             return ResponseEntity.ok(productService.findById(id).get());
         }
-        return ResponseEntity.notFound().build();
+        return new ResponseEntity<Message>(new Message("Product not found"), HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/findByName/{name}")
-    public ResponseEntity<Product> findByName(@PathVariable("name") String name) {
+    public ResponseEntity<?> findByName(@PathVariable("name") String name) {
         if (productService.existByName(name)) {
             return ResponseEntity.ok(productService.findByName(name).get());
         }
-        return ResponseEntity.notFound().build();
+        return new ResponseEntity<Message>(new Message("Product not found"), HttpStatus.NOT_FOUND);
     }
 
     @PostMapping

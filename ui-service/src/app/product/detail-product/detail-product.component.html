@@ -1,1 +1,13 @@
-<p>detail-product works!</p>
+<div class="card mx-auto mt-5" style="width: 18rem;">
+  <div class="card-header">
+    Product
+  </div>
+  <ul class="list-group list-group-flush" *ngIf="currentProduct">
+    <li class="list-group-item">{{currentProduct.id}}</li>
+    <li class="list-group-item">{{currentProduct.name}}</li>
+    <li class="list-group-item">{{currentProduct.price}}</li>
+  </ul>
+  <div class="card-footer mx-auto w-100">
+    <button class="btn btn-primary mx-auto my-auto w-100" (click)="goBack()">Back</button>
+  </div>
+</div>
