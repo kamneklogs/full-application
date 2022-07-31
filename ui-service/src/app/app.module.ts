@@ -13,6 +13,10 @@ import { EditProductComponent } from './product/edit-product/edit-product.compon
 
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule,  ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { MenuComponent } from './menu/menu.component';
+import { IndexComponent } from './index/index.component';
 
 
 
@@ -22,7 +26,11 @@ import {FormsModule,  ReactiveFormsModule} from '@angular/forms';
     ListProductComponent,
     DetailProductComponent,
     NewProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    LoginComponent,
+    SignupComponent,
+    MenuComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

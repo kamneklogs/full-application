@@ -54,10 +54,15 @@ public class JWTTokenFilter extends OncePerRequestFilter {// Run in each request
     }
 
     private String extractToken(HttpServletRequest request) {
-        String header = request.getHeader("Authorization");
+        String headerCleaned = request.getHeader("Authorization");
 
-        if (header != null && header.startsWith(BEARER_TEXT)) {
-            return header.substring(BEARER_TEXT.length());
+        if (headerCleaned != null && headerCleaned.startsWith(BEARER_TEXT)) {
+            log.info(headerCleaned);
+
+            String substring = headerCleaned.substring(BEARER_TEXT.length());
+
+            log.info(substring);
+            return substring;
         }
 
         return null;

@@ -1,6 +1,8 @@
 package com.kamneklogs.fullapp.security.jwt;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +35,14 @@ public class JWTProvider { // Generate a JWT and validate if the tokes is formed
 
         MainUser mainUser = (MainUser) authentication.getPrincipal();
 
+        Map<String, Object> extraClaims = new HashMap<>() {
+            {
+                put("arg0", "arg1");
+            }
+        };
+
         return Jwts.builder()
+                .addClaims(extraClaims)
                 .setSubject(mainUser.getUsername())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(new Date().getTime() + expiration * 1000))
@@ -41,7 +50,6 @@ public class JWTProvider { // Generate a JWT and validate if the tokes is formed
     }
 
     public String getUsernameFromJWT(String token) {
-
         return Jwts.parserBuilder().setSigningKey(secret).build().parseClaimsJws(token).getBody().getSubject();
     }
 

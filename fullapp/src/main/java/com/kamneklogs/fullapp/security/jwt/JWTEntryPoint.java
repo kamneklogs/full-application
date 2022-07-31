@@ -21,12 +21,8 @@ public class JWTEntryPoint implements AuthenticationEntryPoint {// Verify if the
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
             AuthenticationException authException) throws IOException, ServletException {
-        log.error( authException.getMessage());
 
-        log.error( request.getRequestURI());
-
-
-
+        log.info("Authorization validation");
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
     }
 

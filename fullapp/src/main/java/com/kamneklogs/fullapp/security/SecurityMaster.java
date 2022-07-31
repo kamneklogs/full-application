@@ -68,5 +68,4 @@ public class SecurityMaster {
 
         return http.build();
     }
-
 }
